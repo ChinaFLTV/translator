@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">translator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  2022-10-5  10:09-mainActivity  -->
+    <string name="mainActivity_bottomNavigationBar_title_home_common_Chinese">主页</string>
+
+
 </resources>
