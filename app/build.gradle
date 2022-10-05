@@ -55,6 +55,7 @@ dependencies {
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
     // 2022-10-5  11:5-引入自定义的ViewPager
     implementation 'com.alibaba.android:ultraviewpager:1.0.7.8'
-
+    // 2022-10-5  17:41-引入自定义的SearchView
+    implementation 'com.github.xiaoyou-xblog:SearchDialog:v2.2'
 
 }

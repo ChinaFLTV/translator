@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="@+id/mainActivity_constraintLayout_common"
         app:qmui_topbar_title_gravity="center" />
 
-    <com.tmall.ultraviewpager.UltraViewPager
-        android:id="@+id/mainActivity_ultraViewPager_common"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainActivity_viewPager2_translateDataShow_common"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@android:color/darker_gray"
