@@ -9,9 +9,10 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.hjq.toast.ToastUtils;
 import com.hjq.toast.style.WhiteToastStyle;
+import com.ptp.translator.adapter.UltraPagerAdapter;
 import com.qmuiteam.qmui.arch.QMUISwipeBackActivityManager;
 import com.qmuiteam.qmui.widget.QMUITopBar;
-import com.qmuiteam.qmui.widget.QMUIViewPager;
+import com.tmall.ultraviewpager.UltraViewPager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     // 2022-10-4  19:24-主程序的顶栏
     @SuppressWarnings("FieldCanBeLocal")
     private QMUITopBar topBar;
-    // 2022-10-4  19:53-主程序的ViewPager
-    private QMUIViewPager viewPager;
+    // 2022-10-5  16:22-主程序的ViewPager
+    private UltraViewPager viewPager;
     // 2022-10-5  9:56-主程序的底部导航栏
     private BottomNavigationBar navigationBar;
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 2022-10-4  19:24-获取主程序界面中的组件
         topBar = findViewById(R.id.mainActivity_appBar_title_common);
+        viewPager = findViewById(R.id.mainActivity_ultraViewPager_common);
         navigationBar = findViewById(R.id.mainActivity_bottomNavigationBar_common);
 
 
@@ -57,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
         // 2022-10-4  19:34-初始化QMUI框架相关资源
         topBar.setTitle("TRANSLATOR");
+        viewPager.setScrollMode(UltraViewPager.ScrollMode.HORIZONTAL);// 2022-10-5  16:59-设置滑动方式为水平滑动
+        UltraPagerAdapter pagerAdapter = new UltraPagerAdapter(false);
+        viewPager.setAdapter(pagerAdapter);
+
+
         navigationBar.addItem(new BottomNavigationItem(R.drawable.svg_home, R.string.mainActivity_bottomNavigationBar_title_home_common_Chinese))
                 .addItem(new BottomNavigationItem(R.drawable.svg_home, R.string.mainActivity_bottomNavigationBar_title_home_common_Chinese))
                 .addItem(new BottomNavigationItem(R.drawable.svg_home, R.string.mainActivity_bottomNavigationBar_title_home_common_Chinese))

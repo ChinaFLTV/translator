@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--suppress DeprecatedClassUsageInspection -->
-<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--suppress DeprecatedClassUsageInspection -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity_constraintLayout_common"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="true"
     android:orientation="horizontal"
     tools:context=".MainActivity"
     tools:ignore="MissingDefaultResource">
@@ -14,14 +15,25 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#2D8671"
+        app:layout_constraintTop_toTopOf="@+id/mainActivity_constraintLayout_common"
         app:qmui_topbar_title_gravity="center" />
 
+    <com.tmall.ultraviewpager.UltraViewPager
+        android:id="@+id/mainActivity_ultraViewPager_common"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/mainActivity_bottomNavigationBar_common"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivity_appBar_title_common" />
 
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:id="@+id/mainActivity_bottomNavigationBar_common"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.percentlayout.widget.PercentRelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

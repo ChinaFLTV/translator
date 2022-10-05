@@ -53,6 +53,8 @@ dependencies {
     implementation 'com.github.getActivity:ToastUtils:10.5'
     // 2022-10-5  11:15-引入百分比布局
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    // 2022-10-5  11:5-引入自定义的ViewPager
+    implementation 'com.alibaba.android:ultraviewpager:1.0.7.8'
 
 
 }
